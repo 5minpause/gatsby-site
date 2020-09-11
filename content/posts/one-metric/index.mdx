@@ -1,0 +1,16 @@
+---
+layout: post
+title: "Code quality & security audit"
+categories: "newsletter"
+date: 2018-10-01 15:00:00 +0200
+---
+
+I spent the day at a new client's office. They hired my to do a complete code quality and security audit for their website and shop system. They are rebuilding and relaunching it. The app is built using Ruby on Rails.
+<!--more-->
+The client asked for my expert opinion about the general code quality as well as specific hotspots like PayPal integration.
+I will create multiple pages of in-depth analysis and recommendations on how to improve the project.  
+
+Starting this project today consumed all of my attention, thus you get this letter now. It's evening here for me in Berlin and I couldn't be happier with how the day went. There were points in my past where co-workers snared at my thoroughness and me being (over)precise. It turns out these are very good attributes to have when it comes to an audit like this.
+
+Yours,
+Holger

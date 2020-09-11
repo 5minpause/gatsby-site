@@ -1,0 +1,31 @@
+---
+layout: post
+title: "Confidence, or: How to assess your coworkers"
+categories: "newsletter"
+date: 2019-02-18 15:00:00 +0200
+---
+
+Today I'd like to answer a question.
+
+> As a (project or product) manager, how am I able to assess whether my coworkers write good code?
+
+It's is a good question. It's easy to see why a development team lead might want to know whether her direct reports write good code. And she probably has pretty easy means to find out. A project or product manager might care just as much—or he might only be curious. Either way, how could he judge the code quality?
+
+Related to Friday's email, if you wanted to know something about the software quality, you could ask your clients or users. Or you might already know because people are usually quick to share their opinions especially if something is wrong.
+
+The quality of the code your coworkers write can be assessed with quality metrics.
+
+You can take relatively simple metrics like
+
+  - lines of code (per class, per file)
+- number of commits per author per day
+
+Or you could use a software as a service offering like CodeScene or CodeClimate or SonarQube. These offer advanced metrics that take a little more "Code-Fu" to gather.
+
+The most straightforward, most effective metric is another one: Ask them! They are developers and work with the code all day. **They will have an opinion on it.** Perhaps they have a hard time to explain something they don't like, depending on their seniority. But you will get some measure of quality. The more people you talk with, the more opinions you can get. And if their views are orthogonal to each other, you can offer to use static analysis to settle the debate.
+
+The question I received had a second part as well:
+
+> ... and how can I get them to improve their code?
+
+I will offer an opinion on that one tomorrow.

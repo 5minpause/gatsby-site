@@ -1,0 +1,28 @@
+---
+layout: post
+title: "Processes for achieving quality"
+categories: "newsletter"
+date: 2018-09-03 15:00:00 +0200
+---
+
+Hi friend.
+
+So I've been busy at my client's today. I had to implement a sidebar navigation with React. I did something like that a few years ago already and could now redo it for this client. This was great because I could build on my knowledge from the last years. And that's why I got totally lost in time… I bet you understand. 😉
+  
+Last week we talked about quality, and how you could measure it in other's projects but also your own. Today I want to think about how we can achieve a certain level of quality. But more important: How can we make sure we **always** achieve this level in our projects.  
+<!--more-->
+The answer is as simple as complex: You need to find processes that help you achieve these results and then make sure that you—and everyone on your team—always follow these same steps.  
+
+This could mean that you use a service like Code Climate (I linked to them before) to test your team's code against the same metrics on every commit / pull-request. The hard part for this process will probably be to find common rules for the code-metrics-tests. In a team I worked with, we did have some problems to come to a shared understanding which rules should be followed and which should be ignored. It starts with simple things like line length (always 100 cols, of course, right? Right?!? 🤓) and it continues with others like maximum length of a method, or module. And when are you allowed to ignore that rule, if ever?!
+
+We debated about a day or more if my memory serves me right. Then we had found our rules. But this brought forth an even bigger problem: Get everyone to obey these rules… :fight:
+
+Perhaps start with "simpler" (really?) things: Decide what your team should write in your projects' READMEs. Create a new wiki page (You know, these things from the 2000s. These days it's all "shared knowledge base system thingy") and write down, what the README needs to cover.
+
+Then move to more contended territory: How to document your code. Will you use something like [YARdocs](https://yardoc.org/)? If so, which parts are required for every class/module? Which ones for methods?
+Decide and write it down so you can refer to it later on.
+
+This should be a good start—and will take long enough. Believe me! Once you reached that point, we can talk about how to automate the checks for whether people follow your rules. And this would be something where I'd come in. This always takes _precious time_ away from projects and managers have a hard time budgeting for that. If you need help in that area, write me an email. I can help.
+
+Yours,
+Holger

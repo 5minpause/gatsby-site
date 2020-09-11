@@ -1,0 +1,29 @@
+---
+layout: post
+title: "Formatting dates"
+categories: "newsletter"
+date: 2018-08-20 15:00:00 +0200
+---
+When was the last time you needed to display a formatted date somewhere in your applications? Since I work a lot on React (or generally JS) apps these days, I recently had the "pleasure" to format dates in JS. After receiving them from a Ruby API. Which in turn takes the (Postgres) db timestamps and converts them into Ruby (date)time objects. Oh the fun we had. "Of course" standardizations saves your ass in this situation. Usually at least.
+<!--more-->
+What I did not run into (because of my luck working with Ruby and JS) is the nice little thing, Peter Hosey describes in his article ["Unicode date formats, YYYY?!"](https://boredzo.org/blog/archives/2015-10-24/the-international-standards-organization-hates-your-guts). You should click that link, if only just to see the url of the article. It's not the title I've mentioned above…
+
+Short summary:
+There is this thing called "year for week-of-year". You probably know that sometimes at the end of the year the calendar week 1 already started—but we're still in the old year. If you print a date of that range, say December 31st 2018, you have to pay attention how your date-formatter-function actually formats the date. If you use the wrong pattern, you could end up with the wrong year!
+
+Go ahead and click the link ["Unicode date formats, YYYY?!"](https://boredzo.org/blog/archives/2015-10-24/the-international-standards-organization-hates-your-guts) 😉
+
+Happy 2018!
+
+Yours,
+Holger
+
+PS: If you want to display the year for week-of-year in Ruby/Rails, you'll need to use the pattern `%G` or `%g`:
+
+	ISO 8601 week-based year and week number:
+	The week 1 of YYYY starts with a Monday and includes YYYY-01-04.
+	The days in the year before the first week are in the last week of
+	the previous year.
+	  %G - The week-based year
+	  %g - The last 2 digits of the week-based year (00..99)
+	  %V - Week number of the week-based year (01..53)

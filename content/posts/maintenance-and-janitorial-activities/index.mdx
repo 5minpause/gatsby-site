@@ -1,0 +1,24 @@
+---
+layout: post
+title: "Maintenance and janitorial activities"
+categories: "newsletter"
+date: 2018-08-08 15:00:00 +0200
+---
+You walk into a room. You haven't been here before but you need to find something. Your friend told you, that you'll find it there: "It has to be there somewhere. Please just take a thorough look around!". You find old snack boxes , papers upon papers and stuff that you wouldn't want to touch because it looks like it might already be alive. A distinctive smell permeates the room. You don't want to be in here for too long. But you want to find the thing...! After looking around for 10-15 minutes you notice that you lost track of where you've already searched before. The whole mess is just too much for you.  
+<!--more-->
+Do you know that feeling? I hope 🤞 you don't experience that too often. But that's what I felt the other day when I had to look into an older code base that I worked with a while ago. These are the distinctive characteristics of a code base that wasn't looked after enough. A code base where refactorings did not happen consistently. Where technical debt was piled sky high and where things were just left how they always were. Because the cost of cleaning up was thought to be too high.  
+
+This is what happens, if a team doesn't have a policy they consistently follow. Every team needs that policy and it's name is something like this: "Clean up your own mess and clean up anybody else's. And avoid making a mess in the first place." Admittedly that's a bit clunky. 😂 But still. You have to make regular refactorings. Usually the best point in time is, when you reached a new understanding of the business case that you are replicating in your software. When you are writing code you have a certain knowledge about the thing your are building. And this knowledge evolves and grows over time. It's common to look back at code and notice that the application has outgrown the old code.
+
+Example:
+We have `Company`s in our application. When we want to import new data into the app, somebody (who's authorised, but that's another story 😉) sends an email to a certain email address with e.g. an Excel sheet attached. Whe then parse the sheet and import the data into the app. But *only*, if the email address is known. How do you test if an email is known? We created an `EmailAddress` model and set things up in a way, that a `Company` can have many `EmailAddress`es. That way we could be certain that different people of the company in question could initiate imports, but we didn't need to know who it was in the specific case.
+Later on we noticed that the companies usually have email addresses with the same domain. It did not happen at all, that employees of a company had email addresses with different domains. So we deleted the whole email address model and all records in the database. And we created a new attribute for the `Company` model: `domain` (of type string). So now we only check the domain (and tld) of the email and can see if it's whitelisted.
+
+Simple example? True. But image what that picture could look like if we just added a `domain` attribute without deleting the `EmailAddress` and the association. People wouldn't know what they were supposed to use, or which would precede the other.
+
+So cleaning up makes sense. With that in mind, look through your code base. What old entities, things or concepts should you rework, delete or improve on?
+
+Yours,
+Holger
+
+PS: Another thing you should clean up? Your mom would probably say "your room". But what about your OAuth authorisations for apps you tried out but don't use anymore? Have a look at [Twitter](https://twitter.com/settings/applications), [Github](https://github.com/settings/applications?page=1) and other providers you might have used earlier. Some people use this thing called Facebook, I hear. Perhaps you used it to log into things?

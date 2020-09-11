@@ -1,0 +1,24 @@
+---
+layout: post
+title: "Interfaces"
+categories: "newsletter"
+date: 2018-10-18 15:00:00 +0200
+---
+
+> In computing, an interface is a shared boundary across which two or more separate components of a computer system exchange information.
+(Source: [Wikipedia.org](https://en.wikipedia.org/wiki/Interface_(computing)))
+
+You develop a web application that has a frontend for the users and a backend for the business logic and the data persistence. (This is a simplification, bear with me for a second.)  
+Your frontend accesses the data from the backend through an API that the backend provides. This is the first interface. It's right there in its name Application Programming Interface. But let's ignore that one for another second.  
+How does your frontend consume the API? Did you wrap the calls to the API in its own class in the frontend? <!--more-->Or do you send `GET`/`POST` requests to the URLs of the API directly? How does your frontend expect the data to arrive? Will it take simple `JSON`, or do you need instantiated classes or objects at your class boundaries?
+Now imagine you want to exchange the source of your data. You don't need the API anymore, because you will provide a local database that already holds all the data. Or you provide the json in text files.
+
+How hard will it be for you to change the source of the data? To make the frontend consume the new source, be it text files or a local database (e.g., IndexedDB)? Does your design allow for an exchange like this?
+
+If you answer no to this question, then you have a problem. You did not specify an explicit contract between your data source and your consumers.
+
+It would be best if you encapsulated the responsibility to fetch data from somewhere into one module/class/object (call it whatever you like) and reuse that. It could even be a family of objects if you consume many different endpoints. And these objects need explicit contracts.  
+Calling `ProjectsRepository.latest(10)` should return 10 `Project` objects. You should not know where they came from. Now your `ProjectRepository` might internally call `ProjectsEndpoint.latest(10)` or something else. It might do something like `File.read("./projects.json").take(10)` (This is supposed to be pseudocode 😉). You shouldn't need to care. But you should be able to change it easily.
+
+Yours,
+Holger

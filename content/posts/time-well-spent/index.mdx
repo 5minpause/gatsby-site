@@ -1,0 +1,22 @@
+---
+layout: post
+title: "Time well spent"
+categories: "newsletter"
+date: 2018-09-26 15:00:00 +0200
+---
+
+Yesterday I went to an exciting event. The topic was "Can Artificial Intelligence synthesize software?". The company [Seerene](https://seerene.com/) organized the event. I haven't heard about them before, but they are just what I like. They analyze code and projects for optimization potential and defects. I started the conversation with them, let's see what comes out of it.
+<!--more-->
+Perhaps you have heard of the machine-learning software that can make your holiday pictures look like a Picasso? That's called [Becasso](https://www.digitalmasterpieces.com/becasso/), and that's done by the people I visited yesterday. It's a cool achievement to transform a picture into something that looks like a Picasso painting (or just a cool painting…).
+
+Text is more straightforward for machines to understand than pictures. They can recognize patterns more easily. At least that's my understanding. And everyone here listens to me, right now. So just let us pretend I am right for a second. Cool.
+Two programmers write code in two different styles. If you and I write the same Ruby program, it will look different. But—if the problem domain is well defined and smallish—it won't look completely different (most of the times). It should be possible then, to have a machine-learning program that can take my code and make it look like your code. Transform my style into yours. Or vice versa. Or take a style guide, we both decided on, and transform our code into code that conforms to the style guide. Automatically.
+
+I haven't said this would be useful! Of course, there are problems. There always are. What happens, when somebody has to modify that code. Write a new feature… Will the algorithm change the style again? Can the third developer even understand the code the machine wrote?
+
+And what about belletristic? Could I have a program that turns my letters to you into something like it was written by Hemingway? (See what I did there? I subconsciously made you associate my letters with belletristic, ha!)
+
+Software Engineering will be transformed in a lot of fundamental ways in the next 20-30 years. See you around. 😉
+
+Yours,
+Holger

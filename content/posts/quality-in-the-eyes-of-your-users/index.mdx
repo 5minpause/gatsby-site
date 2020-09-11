@@ -1,0 +1,25 @@
+---
+layout: post
+title: "Quality in the eyes of your users"
+categories: "newsletter"
+date: 2018-10-17 15:00:00 +0200
+---
+
+> I bet that most people reading this won’t have UAT **or** QA. So what could you do to still achieve quality in the eyes of your users?
+
+Yours users will spend more time with your software, like it and recommend it more, when they are happy using it. If we're honest it might even be enough to make them not dislike the software. There is so much crap software out there, that people use to get their job done, that the bar is pretty low. 
+<!--more-->
+So let's imagine for a moment, that you want to exceed that goal and make your users happy. What are ways to achieve that if you cannot do User Acceptance Testing?
+
+Here are a few thoughts:
+
+- Let your developers speak to users when planning and architecting the software. Your developers should try to empathise with your users and understand their problems when using the software. Or better: They should understand the pain that the users try to solve when using your software. After all, they don't buy it because it's pretty but because they want to use it to get things done. If your developers understand that pain and can see it through the eyes of the user, they are much more able to create a viable solution to that problem.
+- Make your team use the software themselves during a longer period. That way they can experience the problems themselves and will be much more motivated to improve the solution. Of course, this might not be possible for products that are totally unrelated to your field. How should your team use a hospital facility management software, right?
+- Let your developers work in support for one day/week. This might not solve fundamental problems your solution could have. But it could bring developers closer to your users—that are already using the software—and help them find ways to improve the situation.
+
+I am curious if you have other ideas that I might have overlooked.
+
+One thing I am sure of: You have to speak with users or become users or get in contact with users. You won't improve the situation without changing perspective.
+
+Yours,
+Holger

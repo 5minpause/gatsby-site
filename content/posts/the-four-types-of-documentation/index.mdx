@@ -1,0 +1,36 @@
+---
+layout: post
+title: "The four types of documentation"
+categories: "newsletter"
+date: 2018-09-11 15:00:00 +0200
+---
+
+You probably already noticed from the title of this letter, the topic of documentation is still important to me. Now that I began spending time with it I notice the many different aspects of documentation. And there’s more than I thought.
+
+Today I want to share a resource with you that taught me about the four different levels/types of docs. I didn’t even know that there were four levels, or why they mattered.
+They start with something very important:
+
+> It doesn’t matter how good your software is, because **if the documentation is not good enough, people will not use it**.
+<!--more-->
+
+And they go on with this:
+
+> In this article I will explain how you can make your documentation better, not by working harder at it, but by doing it the right way. The right way is the easier way - easier to write, and easier to maintain.
+
+> There are some very simple principles that govern documentation that are very rarely if ever spelled out. They seem to be a secret, though they shouldn’t be.
+
+> If you can put these principles into practice, it will make your documentation better and your project, product or team more successful - that’s a promise.
+
+
+Principles that make your project more successful (aka increase its quality)? Please tell me more!
+
+### The secret
+
+> Documentation needs to include and be structured around its **four different functions**: tutorials, how-to guides, explanation and technical reference. Each of them **requires a distinct mode of writing**.
+
+Perhaps I shouldn’t have told you the secret before you clicked the link? I don’t know. But if you want to learn something about how to improve your docs, do yourself and your _readers_ a favor and read the article:
+
+[What nobody tells you about documentation](https://www.divio.com/blog/documentation/)
+
+Yours,
+Holger

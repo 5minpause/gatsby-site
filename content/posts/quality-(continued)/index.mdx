@@ -1,0 +1,28 @@
+---
+layout: post
+title: "Quality (continued)"
+categories: "newsletter"
+date: 2018-08-31 15:00:00 +0200
+---
+
+Hi friend.  
+
+My brother reads these emails as well, and responded with some interesting thoughts re: quality. Shared with permission:  
+
+> Aside from hard metrics that are often difficult to install, there's also a lot of experience involved. I look into details like communication, discipline, timetables and overall presentation of the topic and the approach of the presenter.  
+> Does it “feel” right/good/viable or are they just putting on a good show?
+> One major category is the quality & depth of their questions and documentation. If those offer good quality and are well structured, I usually find the rest of it also well produced.
+
+<!--more-->
+
+
+(He doesn't have to deal with creating software in the way that you and me might deal with it, but it's applicable nonetheless.)
+
+It is certainly true that taking into account the whole presentation of the library/product offers a good insight into what you can expect to get.
+
+For software libraries that would mean your README, documentation and perhaps wiki pages, maintenance of your issue tracker and how you communicate with users of your library. Release schedule and notices of breaking changes together with your roadmap. These all help to get a better picture.
+
+Do you have any other idea? How would you apply these thoughts on code from your co-workers? How do your measure their quality?
+
+Yours,
+Holger

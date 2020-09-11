@@ -1,0 +1,16 @@
+---
+layout: post
+title: "Only two rules"
+categories: "newsletter"
+date: 2018-10-26 15:00:00 +0200
+---
+
+There are only two hard rules when doing code review with your coworkers:
+
+1. Keep it professional. Don't. Get. Personal.
+2. Don't take it personal.
+
+Remember that you are talking about letters and symbols in files. Nothing more and nothing less.  
+You are doing this to improve the results, the software.  
+
+You are not your code!

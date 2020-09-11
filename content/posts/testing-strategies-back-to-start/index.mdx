@@ -1,0 +1,32 @@
+---
+layout: post
+title: "Testing strategies - Back to start"
+categories: newsletter
+date: 2019-02-04 15:00:00 +0100
+---
+
+On Friday I gave you a very quick intro on how you could increase your test coverage and confidence for an application that has no tests.
+You can consider this the quick and dirty approach that works, when you have little time and just want to start somewhere.
+
+Perhaps you should start at an earlier point. A proper way to start the journey to testing software is the state the question
+
+> Why do we test software?
+<!--more-->
+
+The answer to this question is rather long. For any given project, the objectives of testing may include:
+- To prevent bugs
+- To find failures and bugs
+- To evaluate requirements, user stories, design, and code
+- To verify whether all specified requirements have been fulfilled
+- To validate whether the software is complete and works as the users and other stakeholders expect
+- Document and compare quality of the product
+- Provide sufficient information to stakeholders about the level of quality the software achieved
+- Reduce the risk that undetected failures occur in production
+- To comply and verify compliance with contractual, legal, or regulatory requirements or standards
+
+There are many ways that a software project can have defects. Exhaustive testing can help in reducing the risk that any of the many possible defects leads to a failure in production.
+Without tests you can only hope that nothing serious happens. Experience in writing software is not enough to guard you against introducing errors into your software.
+You wouldn't need to write automated tests for all these bullet points above. Testing can be done manually, through peer-review or other means as well.
+
+To make sure that you covered the important parts and reduced the risk for defects effectively you need test management. Test management isn't everything in your `/tests` directory. Linking issues in your project management tool to a risk assessment list, verifying that important documents and decisions were reviewed (or tested) and documenting all the work that goes into reducing the number of defects; This can be called test management.
+But there is more to it. We will get to this later.
