@@ -1,0 +1,167 @@
+---
+  title: Technical Debt
+  slug: "/technical-debt"
+---
+
+If you are doing software development you have little chance to escape the term
+‘technical debt’. You can find many articles online discussing technical debt
+and its implications on software development. But there is a problem with many
+of those articles.
+
+> They are discussing the wrong thing.
+
+This article is my attempt at describing what technical debt really is, how to
+spot it and what to do about it. So let's start with the current, wide-spread
+definition of technical debt.
+
+_Technical debt is like financial debt. You take out a loan and until you pay it
+back in full, you have to pay interest. The loan in the case of software are the
+shortcuts you take to reach your goal sooner. If you decide to forgo writing
+tests or having a proper architecture and design for your software or feature,
+you are creating technical debt. You might reach your goal sooner this way, but
+once you have to touch the code again, you have to pay the interest. In this
+case the interest is the time the next feature takes longer because you have to
+clean up the old code first. Or because the old code is written in such a way
+that implementing new features just takes longer. The code might be hard to
+understand or work with. Many duplications and bad abstractions generally fall
+into this category._
+
+This definition makes sense, right? Perhaps you've experienced this situation
+firsthand already. Situations like these do happen. Bad code is written, which
+leads to bugs and slows down later stages of development.
+
+Only, this isn't technical debt. I'll tell you how to call that. But first,
+here's the original definition of Technical Debt, by Ward Cunningham:
+
+> Technical debt defines a cycle where our understanding grows so that one day
+in the future we see a better way and put it in.
+
+Now this may be hard to understand completely, so let's take an expanded
+explanation from Ward:
+
+>  “I’m never in favor of writing code poorly, but I am in favor of writing code
+to reflect your current understanding of a problem even if that understanding is
+partial.
+>
+> “You know, if you want to be able to go into debt that way by developing
+software that you don’t completely understand, you are wise to make that
+software reflect your understanding as best as you can, so that when it does
+come time to refactor, it’s clear what you were thinking when you wrote it,
+making it easier to refactor it into what your current thinking is now.
+>
+> “In other words, the whole debt metaphor, let’s say, the ability to pay back
+debt, and make the debt metaphor work for your advantage depends upon your
+writing code that is clean enough to be able to refactor as you come to
+understand your problem.”
+
+Perhaps now it is clearer what the current definition of technical debt actually
+describes and how to call code that is written like that: **Sloppy work**. Don't
+use the term Technical Debt for describing code that takes shortcuts. It's just
+bad work, especially when developers know better but decide to take those
+shortcuts anyway. Once you see code like that, let the developers know—in a
+gentle kind of way!—that they've messed up.
+
+## Don't use the term Technical Debt. It's just sloppy work.
+
+Here's an example of what sloppy work can look like to make it easier to spot
+in the future:
+
+> “In order to meet the new release deadline of November, we have decided to
+forego writing unit tests in the final three weeks of the project. We will write
+these tests after the release.”
+
+That example shows that there was technical debt already present. If it is hard
+to write tests and if writing tests slows you down so much that you miss release
+targets, you either have too many inexperienced developers or writing tests is
+too hard and laborious because of bad code design.
+
+## How to spot or notice sloppy work
+
+By now you know the difference between technical debt and sloppy work. If you
+want to get help in recognizing sloppy work, there are tools for that. One of
+the best ways to scan your code for those spots is to use **static analysis**.
+You can use a “software-as-a-service” offering like [Code
+Climate](https://codeclimate.com) or [CodeScene](https://codescene.io). These
+tools get access to your Git repository and make a complete, in-depth scan of
+your code. You are then presented with a detailed analysis of your code and all
+its good and bad parts. If you don't like using an external tool for a static
+code analysis you can also find help with running it locally, on your
+computer. Depending on your tech stack (programming languages etc.) there are
+small tools or even whole suites available. If that's something you'd like to
+use, I'll have a different article on those available soon. I'll update this
+article and link appropriately once I've published it.
+
+Other examples of sloppy work are:
+
+- Missing tests
+- Missing documentation
+- Development of features/bugfixes/etc. that take longer than estimated
+- [The amounts of “WTF”s uttered by developers during code
+  review](https://www.osnews.com/story/19266/wtfsm/)
+
+## What do to about sloppy work and real technical debt?
+
+In order to tackle the sloppy work in your project you can use static code
+analysis, as I've already written. Another idea is to create a _sloppiness
+ledger_. It's a document that you can create in your team's wiki or add it as a
+text file to your project directory. In there you record decisions. Every time
+you feel like you have to take a shortcut while writing your code you add that
+data point to your ledger. Be impartial about who is responsible or who decided
+to take the shortcut. Just add the decision to the ledger. Write down **when**
+this decision was made and **note the reasons**. But don't judge, just collect
+them.
+Review your ledger in regular intervals. After some time has passed you can use
+the ledger in discussions with your managers to decide how to tackle sloppy code
+and why development might take longer than they'd like. Depending on how you
+manage your sloppiness ledger you can link those entries back to work your team
+did then and show how that decision impacted you then and now. Framing
+discussions like that makes a decision to not write tests more tangible for all
+people involved.
+
+My suggestion is to also create a debt ledger. You hopefully have a way to
+record your software architectural decisions (you use [ADRs](https://github.com/joelparkerhenderson/architecture_decision_record),
+right?!). Using ADRs you can record who made what decision when. Once you've
+learned more about your problem domain you might revisit older ADRs and realize
+that you are  -- as a team -- now able to find a better solution for this
+problem. This is the time where you add an entry to your debt ledger. You record
+in it what the original decision was and how more knowledge changed the
+solution. You can also add descriptions of how refactoring code lead to a better
+solution. Then you can compare and see whether your team has a problem with too
+little knowledge of the problem/solution domain or with doing sloppy work.
+Perhaps they need some [workshops](/services/) to increase their ability to
+write better code?
+
+## Ideas about technical debt, heard on the web, refuted
+
+> In short, technical debt is created when new business requirements make old
+> code obsolete.
+
+That's BS. This is just regular practise.
+
+> Replace the application. While this will introduce new technical debt, the
+> idea is to address it quickly and minimize it as much possible.
+
+Without more/better knowledge, practices and processes you'll be in the same
+situation with your code as you're now. Only later.
+You will get the same results if you do the same things.
+
+> Remember, just like financial debt, technical debt gets more expensive the
+> longer you hold it.
+
+This isn't necessarily true. If you have old code that works, never changes and
+that you don't have to touch it doesn't matter what quality it has. But that's
+another article to write 😉...
+
+> When taking short cuts and delivering code that is not quite right for the programming task of the moment, a development team incurs Technical Debt. This debt decreases productivity. This loss of productivity is the interest of the Technical Debt.
+
+I am not quite certain of that. The debt is not yet knowing enough about the problem domain and writing/implementing the solution domain. The interest is when you learn something new and have to go back to refactor the old solution domain to reflect your knowledge gain. There might be a temporary loss of productivity since you cannot expand the application with new features while you are refactoring.
+
+In closing, let me share another quote from Ward Cunningham:
+
+> With borrowed money you can do something sooner than you might otherwise, but until you pay back that money you will pay interest.
+>
+> I thought borrowing money was a good idea. I thought that rushing software out the door to get some experience with it was a good idea. But that of course you would eventually go back and as you learned things about that software you would repay that loan by refactoring the program to reflect your experience as you acquired it.
+
+Here's where you can find more from Ward on Technical Debt: [http://c2.com/cgi/wiki?WardExplainsDebtMetaphor](http://c2.com/cgi/wiki?WardExplainsDebtMetaphor)
+
+
