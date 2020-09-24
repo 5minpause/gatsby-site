@@ -1,0 +1,17 @@
+---
+title: What role does CI/CD play in your PR?
+slug: "/what-role-does-ci-cd-play-in-your-pr"
+---
+
+My guideline for development workflows leans heavily on having a CI/CD server that orchestrates the whole workflow. CI/CD means continuous integration and continuous deployment. There is a lot to CI, and why and how you should do it. Look for multiple articles on that from me here. For the time being, you can get a wonderful introduction to the subject from another expert: [Martin Fowler on his site].
+
+Your CI server should do certain steps when a PR is opened. These include:
+
+- Check the code for linting errors and warnings.
+- Run all automated tests, including long-running integration tests.
+- Run static (and behavioral) code quality analysis.
+- Deploy the feature branch to a test environment automatically.
+- Inform the reviewers about the results of the above steps, through a comment on the PR, and post the url of the deployed test environment.
+- Block or unblock the the PR from being able to be merged, depending on the results of the above steps.
+
+If you make your CI server report all linting errors, you free your developers to focus on the changes in the logic. Imagine the case where reviewers wants to check your PR, and the first thing they have to do is create lots and lots of comments about linting violations. Nobody will be able to focus on the really important changes and the discussions will grow very big. So let your robots (CI server) handle that for you.

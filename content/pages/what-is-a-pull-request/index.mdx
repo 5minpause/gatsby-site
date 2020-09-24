@@ -1,0 +1,25 @@
+---
+title: What is a pull request?
+slug: "/what-is-a-pull-request"
+---
+
+This is one of several articles on what I consider the best way to do a pull request. There are many ways to do this. I consider this to be the best way because of my experiences doing it like that with different teams. The results tell me that I am right. But first: What is a pull request?
+
+### What is a pull request, or: How should I integrate my changes with the code
+
+To make any of this work, you need to be using a version control hosting provider like GitHub, GitLab or Bitbucket. All of them provide this functionality, Bitbucket even provides it for Mercurial repositories. I use Git with GitHub and GitLab.
+
+A pull request (from here on I'll call it PR), sometimes also called Merge Request (in GitLab) is a way to integrate the changes you made to the repository (the code base) with the master branch (that's the code that goes live to production). I will not go into using Git too much right here, there are other articles about that. If you need a refresher on Git and branching, please come back after reading these articles.
+
+So let's assume you wrote your changes on your own branch, which I'll call `feature/MIH-318-my-feature-name`. You already can see three things here:
+
+- The branch name begins with the kind of branch this is. In our case we work on a new feature for our application, so we call it "feature".
+- The second thing you might notice is, the `MIH-318` part of the name. This comes from our project management software. This is the short title of the ticket that the branch belongs to. More on that later.
+- The last part is the name of the feature. This could also come from your project management software and be the long name of the ticket, or it could be a descriptive name of the feature you are building. Something like `new-user-login-form` or `integrate-stripe-payment-provider`.
+
+Now it's time to get these changes into testing (Staging environment or whatever you'd like to call it). Therefore you pushed your branch with the latest changes to your repository (`origin`) and open a new pull request to merge the changes into the `master` branch.
+
+### Why should you use PRs?
+
+Using PRs gives you an incredible valueable feedback mechanism. This shares the responsibility of the work and makes sure you don't break the application when things go live. This is because a PR is a great opportunity to catch bugs early on during the cycle. Catching bugs and errors earlier in the development cycle reduces the costs to fix them. After all, they didn't interfere with other (new) code yet and are (hopefully) compartmentalized.
+PRs are also a good form of documentation, because of the description and discussion happening in a PR.

@@ -1,0 +1,131 @@
+---
+title: Best practices on doing pull requests
+slug: "/best-practices-on-doing-pull-requests"
+---
+
+This article will deal with a few best practices that should increase the quality of your PRs as well as make your life easier, when using PRs.
+
+### Deploy a test build
+
+I wrote about it before, but you should have your build server (or continuous integration server) deploy your branch-to-be-reviewed to a seperate, clean staging environment. This is where testers can have a look at your changes. This environment is a 100% copy for the production environment. The only thing missing is the real data from production (since that's sensitive data). During the deployment the CI server will populate the environment's database with seed data that is close to the data on production (and mirrors the size of production's database).
+
+You could name this a staging or remote test environment.
+
+### Document the lifecycle in your project management tool
+
+It doesn't matter whether you use JIRA, Trello, Asana or something else. As long as the tool integrates with your build environment and repository in a way, that you can easily jump between the ticket, the PR and any documentation on the wiki. The ticket needs to document the complete lifecycle from the creation of the new branch with every commit on it, to the PR and the CI server's build results as well as the merge and deployment to the remote-test environment and, lastly, to production. You want to have a clear audit-trail easily accessible. This is not done to be able to point fingers, but to be able to understand **why** things are the way they are. Even 12 months later. That's what your project management tool is responsible for.
+
+### Merging when everything is green and 👍
+
+Merging PRs can be a story in itself. The most important thing is: Only merge when every reviewer gave you the thumbs-up _and_ when the CI server indicates that there were no errors at all.
+
+The merging should be done by the assigned reviewer. If there are multiple people responsible, you can talk about who should merge. It shouldn't be the author of the PR. Allowing the author to merge her own changes leads to a bad practice where people merge to quickly, without a proper review. Other than that, it doesn't matter whether the person merging is more or less senior than the author.
+
+### Where do you merge into, or: What's the base branch?
+
+The simplest strategy is to merge a feature branch (and most other branches) into the master branch. This is usually the branch that gets deployed.
+It could be, that you follow a different dev methodology, like [git-flow]. If that is the case, you will probably merge into develop. So your base branch would be `develop`.
+
+No matter what your base branch, note that:
+
+### Smaller features make merging easier
+
+The less changes you want to merge, the easier it will be to review them. You should count on the fact that development of other features will continue while you are developing your feature branch. Those might have started earlier, or there were other branches that fixed bugs. In any case, your base branch will have moved on and evolved. It had a certain state when you branched off of it, but that state won't be the same it is in right now. The longer you wait with your feature, the more work you'll have to do — after you already thought you were done — when you want to merge your changes. This can be frustrating. You wouldn't be the first one to introduce bugs at this point. Since the code has evolved, you are not yet that familiar with the new pieces. But you'll have to make your code work with them. That's where bugs are hiding.
+
+The smaller the feature, the earlier you can merge and the less painful a process it will be.
+
+### Commit early and often with good commit messages
+
+I wrote about it before: Let your commits be small and many. Your commits should follow the SRP (Single Responsibilty Principle). Your commit should change **one thing**. It might and could have side-effects. But it's purpose it to change one thing. In your commit message's subject (50 char length at max) you should succinctly describe what changes this commit introduces. Whenever you reach to the word "and", you know your commit is too big.
+
+A clean history of 2000 commits that are each tightly scoped and with clearly written commit messages is easier to understand and more helpful than 200 commits that each contain countless changes with minimal commit messages. Bad examples for commit messages, that are too often, are "fix", "kill bug", "add stripe" etc.
+
+The commit message serves as your audit trail to your future self. Perhaps you have to do software development for a few years, but there will be a time where you scroll through your commit messages, searching for this one commit that helps you understand why a bug occurs, or why a library was rolled back to an older version. I've seen it with enough teams, that I really suggest you start improving your commit messages.
+
+### Do not squash your commits
+
+This might be a contested opinion, but I am against sqashing commits. Please see the point above, but your commits paint a picture and tell a story. Squashing them loses this. Sure, the changes are there, but you are not able to identify **how a change came to be**.
+
+There is one situation where squashing improves things: When you commit your code, without taking care to write good commit message or how to reduce your commit sizes. Then you squash your commits in the end and write a good, detailled commit message, that adheres to the before-mentioned best practices. This does increase the quality. The history, the **how** is still lost, but at least you can understand that one commit. That's still better than many commits without proper messages.
+
+There are people that do not like merge commits. I understand the reasoning, it seems to be an unnecessary commit. This is true, you can prevent this when **rebasing** your changes onto the base branch. This can be difficult if your repository changes very quickly.
+
+If you do need to squash before merging (I don't know or understand why, please tell me!) please only do it right before merging. Don't do this when opening the PR. Your reviewers should be able to have a look at the history of the development of your branch.
+
+### Use templates to make your lives easier
+
+Now that I explained why you need a well-written description and detailled commit messages, you might wonder how you can facilitate their creation.
+I would propose you create templates.
+We'll start with commit message templates.
+
+#### Git commit message template
+
+Inside your project folder, you'll find the `.git` folder. Open the `.git/config` file in your favorite text editor. Add the following lines:
+
+```
+[commit]
+  # can be local to your project or global
+  template = path/to/your/.gitmessage
+```
+
+It makes no sense, to create this for every project, so you can add this inside your global git configuration. On unix systems this can be found in
+
+`~/.gitconfig`
+
+You would add the same thing in there. I would propose you create a repository for your company or department where you store these templates. This makes it easier to update them for the whole team. Then you just clone the repository and link it correctly: `template = path/to/cloned/repository/.gitmessage`.
+
+This is a basic template that you could tweak:
+
+```
+# 50-character subject line
+#
+# 72-character wrapped longer description. This should answer:
+#
+# \* Why was this change necessary?
+# \* How does it address the problem?
+# \* Are there any side effects?
+#
+# Include a link to the ticket, if any.
+#
+# Add co-authors if you worked on this code with others:
+#
+# Co-authored-by: Full Name <email@example.com>
+# Co-authored-by: Full Name <email@example.com>
+```
+
+You would have this pasted into every commit message you create as a comment (the `#` signs denote comments in git messages). Then you never forget what to write about.
+
+These templates work locally for every developer.
+
+#### Pull request templates
+
+If you use GitHub or GitLab you can create a template that will be used when somebody creates a PR in your repository. It works mostly the same as the git commit message template: Your template gets pasted into the description of the PR and you can use it as an aid to fill in the textbox. As far as I know, there is currently no way to require certain information to be filled out.
+
+A way around that would be to have your CI server parse the PR description and complain on the PR if certain things are missing. This would mean that your developers need to be very disciplined in filling out the description, or else risk complaints by the CI server. If you would be interested in something like that, I will show how to do that in another article.
+
+If you are using GitHub, you can find their [description on how to use a pull request template on their help pages](https://docs.github.com/en/github/building-a-strong-community/creating-a-pull-request-template-for-your-repository#adding-a-pull-request-template).
+GitLab offer a similar description, showing you [how to create merge request templates for their service](https://docs.gitlab.com/ee/user/project/description_templates.html#creating-merge-request-templates).
+
+Both services let you use markdown to write your descriptions. There are some useful additions to Markdown available for you. You can put them to use in your template, so your developers gradually learn to use them properly. One of the biggest features is to create checkboxes in your description (or comments). This is done like this:
+
+`- [ ] Make logo more bigger`
+
+While your checkboxes won’t be mandatory to be checked for your pull request to be accepted, they do provide a nice visual cue about any open tasks.
+
+### Download a templates repository
+
+If you'd like to, I have this [small repository of Git templates](https://gitlab.com/improve-software-quality/git-templates) that you could clone. Then you are able to use the files' paths as values to the template value:
+
+```
+[commit]
+  # can be local to your project or global
+  template = path/to/your/.gitmessage
+```
+
+## Merge the pull request
+
+I said it earlier already, the person merging the PR shouldn’t be the one who opened it. This helps to enforce the principle of four-eyes (or less, depending on your developers).
+
+Finally the PR is merged and you can work on the next feature.
+
+🎉
