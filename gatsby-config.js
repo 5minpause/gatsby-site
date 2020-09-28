@@ -1,17 +1,18 @@
 require(`dotenv`).config({
   path: `.env`,
-})
+});
 
-const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
+const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE;
 
 module.exports = {
   siteMetadata: {
     siteTitle: `Holger Frohloff`,
     siteTitleAlt: `Holger Frohloff`,
     siteHeadline: "Human from Berlin",
-    siteDescription: "I am a human from Berlin occupied with family life, web development, teaching and mentoring and doing sports.",
+    siteDescription:
+      "I am a human from Berlin occupied with family life, web development, teaching and mentoring and doing sports.",
     siteLanguage: "en",
-    author: "Holger"
+    author: "Holger",
   },
   plugins: [
     {
@@ -38,12 +39,6 @@ module.exports = {
             url: `https://www.instagram.com/5minpause/`,
           },
         ],
-      },
-    },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: process.env.GOOGLE_ANALYTICS_ID,
       },
     },
     `gatsby-plugin-sitemap`,
@@ -82,4 +77,4 @@ module.exports = {
       },
     },
   ].filter(Boolean),
-}
+};
