@@ -19,6 +19,4 @@ jobs:
           node-version: '14'
           cache: 'yarn'
       - run: yarn install
-      - run: git config --global user.email "holger@holgerfrohloff.de"
-      - run: git config --global user.name "Holger Frohloff"
       - run: yarn run deploy
