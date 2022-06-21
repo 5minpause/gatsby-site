@@ -2,7 +2,7 @@
 layout: post
 title: "When is the right time to break something?"
 categories: article, code review, quality
-date: 2019-08-09 16:24:00 +0200
+date: 2019-08-09
 ---
 
 

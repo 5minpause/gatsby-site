@@ -2,7 +2,7 @@
 layout: post
 title: "Quick wins, part 3: Keep it local"
 categories: article
-date: 2019-03-06 16:24:00 +0200
+date: 2019-03-06
 ---
 
 

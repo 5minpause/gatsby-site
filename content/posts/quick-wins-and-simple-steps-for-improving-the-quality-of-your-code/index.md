@@ -2,7 +2,7 @@
 layout: post
 title: "Quick wins and simple steps for improving the quality of your code"
 categories: article, quality
-date: 2019-03-04 17:45:00 +0200
+date: 2019-03-04
 ---
 
 

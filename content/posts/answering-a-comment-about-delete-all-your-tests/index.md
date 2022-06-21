@@ -2,7 +2,7 @@
 layout: post
 title: "Answering a comment about 'Delete all your tests'"
 categories: article, code review, quality
-date: 2019-02-20 16:24:00 +0200
+date: 2019-02-20
 ---
 
 

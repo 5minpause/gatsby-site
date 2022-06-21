@@ -2,7 +2,7 @@
 layout: post
 title: "Power Laws"
 categories: article
-date: 2019-03-01 16:24:00 +0200
+date: 2019-03-01
 ---
 
 My work as a consultant offers me the opportunity to accompany a team for a certain amount of time. I join them, we work together, and then I leave again. Our time together gets extended, sometimes.

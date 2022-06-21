@@ -2,7 +2,7 @@
 layout: post
 title: "Driving on the left side of the road"
 categories: article
-date: 2019-02-25 16:24:00 +0200
+date: 2019-02-25
 ---
 
 We don't have rules of the road for software development. You don't have to stop at every red light or keep your speed below a specific limit.

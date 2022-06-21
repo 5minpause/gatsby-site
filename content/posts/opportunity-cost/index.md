@@ -2,7 +2,7 @@
 layout: post
 title: "Opportunity cost"
 categories: article
-date: 2019-11-15 16:24:00 +0200
+date: 2019-11-15
 ---
 
 Today I heard a recent episode of the [Akimbo](https://akimbo.link) podcast by Seth Godin. The topic was opportunity cost. As a quick recap, here's what [Wikipedia](https://en.wikipedia.org/wiki/Opportunity_cost) has to say about opportunity costs:

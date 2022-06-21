@@ -2,7 +2,7 @@
 layout: post
 title: "Quick wins, part 4: YAGNI"
 categories: article, code review, quality
-date: 2019-03-07 16:24:00 +0200
+date: 2019-03-07
 ---
 
 We refactored some code yesterday, to move knowledge about an implementation of a function back to where it belonged: Into the function's class and into the function itself.

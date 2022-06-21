@@ -2,7 +2,7 @@
 layout: post
 title: "Why ist software so bad?"
 categories: article
-date: 2019-11-15 16:24:00 +0200
+date: 2019-11-15
 ---
 
 A couple of days ago I talked about the Akimbo podcast by Seth Godin. It was an eposide about opportunity cost and how that relates to livelong learning as a software developer.

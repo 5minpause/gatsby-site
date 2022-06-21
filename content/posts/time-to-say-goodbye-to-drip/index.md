@@ -2,7 +2,7 @@
 layout: post
 title: "Time to say goodbye to Drip"
 categories: article
-date: 2019-08-16 16:24:00 +0200
+date: 2019-08-16
 ---
 This will be the last email that you'll get from me sent by Drip. My account will be terminated tomorrow.
 

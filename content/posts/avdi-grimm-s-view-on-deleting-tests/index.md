@@ -2,7 +2,7 @@
 layout: post
 title: "Avdi Grimm's view on deleting tests"
 categories: article
-date: 2019-03-19 16:24:00 +0200
+date: 2019-03-19
 ---
 
 A few weeks ago I wrote about [deleting your tests][1]. Yesterday I received the weekly email from [Avdi Grimm][2], where he touches on this subject.

@@ -2,7 +2,7 @@
 layout: post
 title: "List of programming principles"
 categories: article, programming, principles
-date: 2019-02-14 16:24:00 +0200
+date: 2019-02-14
 ---
 
 

@@ -2,7 +2,7 @@
 layout: post
 title: "Motivation, or: How to get your coworkers to write better code"
 categories: article
-date: 2019-02-19 16:24:00 +0200
+date: 2019-02-19
 ---
 
 

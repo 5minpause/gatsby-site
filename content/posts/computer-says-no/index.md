@@ -2,7 +2,7 @@
 layout: post
 title: "Computer says no"
 categories: article
-date: 2019-02-26 16:24:00 +0200
+date: 2019-02-26
 ---
 
 
