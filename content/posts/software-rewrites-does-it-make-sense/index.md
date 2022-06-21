@@ -2,7 +2,7 @@
 layout: post
 title: "Software rewrites - Does it make sense?"
 categories: article
-date: 2019-02-21 16:24:00 +0200
+date: 2019-02-21
 ---
 
 

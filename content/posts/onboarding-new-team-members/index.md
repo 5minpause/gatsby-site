@@ -2,7 +2,7 @@
 layout: post
 title: "Onboarding new team members"
 categories: article
-date: 2019-11-18 14:17:00 +0200
+date: 2019-11-18
 ---
 
 

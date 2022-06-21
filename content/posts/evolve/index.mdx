@@ -2,7 +2,7 @@
 layout: post
 title: "Evolve"
 categories: "newsletter"
-date: 2018-10-09 15:00:00 +0200
+date: 2018-10-09
 ---
 Since I strongly believe that you can only achieve high-quality work if you trust your teammates, I am trying something today. I trust you.
 
@@ -11,7 +11,7 @@ I will show you a skeleton in my closet.
 A few years ago, I worked on an Open Source Content Management System in Ruby on Rails (a OSCMSiRoR 😂). This system is still used in production to this day. The team and I developed it for clients and kept reusing it.
 Back then I and the others didn't know a perfect way to develop a CMS. We had been users of other Ruby CMSs but found them inadequate for our use-case. And that's when you decide to roll your own. 😶
 
-It was designed as a Rails Engine, so it could easily be included into other Rails Apps (Active Admin and Devise work like that as well). I didn't know as much about software design and architecture back then, as I do now. Every time I look at the source code, I want to rip it apart and redo it. Apply my knowledge and make things better.  
+It was designed as a Rails Engine, so it could easily be included into other Rails Apps (Active Admin and Devise work like that as well). I didn't know as much about software design and architecture back then, as I do now. Every time I look at the source code, I want to rip it apart and redo it. Apply my knowledge and make things better.
 Looking from the outside in, it seems easy to have small wins that improve the project. The reality is that the apps that use the CMS in production are too heavily bound to it. You cannot just change code in the engine because you would run into trouble in your client apps. I've tried.
 
 This is a lesson in itself: You have to decouple your apps from the engines that they use.
@@ -20,7 +20,7 @@ What was the single biggest error we made back then when we designed it? We want
 
 Side-note regarding quality: Above all else, we had too few tests. Changing things without proper test coverage is bound to go wrong.
 
-What would I recommend doing differently nowadays? The idea to have an underlying CMS that works with any kind of app and provides management capability for any kind of content you could throw at it is still a good idea.  
+What would I recommend doing differently nowadays? The idea to have an underlying CMS that works with any kind of app and provides management capability for any kind of content you could throw at it is still a good idea.
 First of all I would provide an API with a strong contract. Then you could test against the API and it could evolve and things still would work. As long as you fulfill the contract. The content is only provided via this API. The users of your engine won't ever have a way to access content directly.
 Second, I would use a document-based database. It lends itself beautifully for this task and you don't need a relational database for that. Save your content as JSON. Save your attachments/media-objects in there as well.
 

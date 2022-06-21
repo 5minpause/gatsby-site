@@ -2,7 +2,7 @@
 layout: post
 title: "Quick wins, part 2: Method names revisited"
 categories: article
-date: 2019-03-05 16:24:00 +0200
+date: 2019-03-05
 ---
 
 

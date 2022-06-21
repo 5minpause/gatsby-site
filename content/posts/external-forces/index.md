@@ -2,7 +2,7 @@
 layout: post
 title: "External forces"
 categories: article, code review, quality
-date: 2019-03-15 16:24:00 +0200
+date: 2019-03-15
 ---
 
 I am occupied with learning these days. Learning on my own about [visualizations of data][1] among other topics. But also learning about learning. For that I read what other people think about learning. There are many things I have to learn about this whole topic. One thought I saw repeatedly, was about external forces, or limiting factors.

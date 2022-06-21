@@ -2,7 +2,7 @@
 layout: post
 title: "Speaking into a microphone"
 categories: article
-date: 2019-08-02 16:24:00 +0200
+date: 2019-08-02
 ---
 
 ### Work

@@ -2,7 +2,7 @@
 layout: post
 title: "Inspecting changes locally before pushing"
 categories: article
-date: 2019-03-21 16:24:00 +0200
+date: 2019-03-21
 ---
 
 

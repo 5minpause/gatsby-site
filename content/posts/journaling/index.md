@@ -2,7 +2,7 @@
 layout: post
 title: "Jouraling"
 categories: article
-date: 2019-07-24 16:24:00 +0200
+date: 2019-07-24
 ---
 
 

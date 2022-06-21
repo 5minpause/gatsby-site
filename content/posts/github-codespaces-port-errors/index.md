@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "GitHub Codespaces port errors"
-categories: ""
-date: 2021-11-01 11:45:00 +0200
+categories: article
+date: 2021-11-01
 ---
 
 GitHub codespaces is a great feature by GitHub that let's me work on an iPad way easier than it was before.

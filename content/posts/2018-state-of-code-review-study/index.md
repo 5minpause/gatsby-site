@@ -2,7 +2,7 @@
 layout: post
 title: "2018 State of Code Review Study"
 categories: article, code review
-date: 2019-02-15 16:24:00 +0200
+date: 2019-02-15
 ---
 
 > 81% of respondents who were satisfied with their code review process were also satisfied with the overall quality of their software. Respondents who were not satisfied with their code review process were half as likely to be satisfied in their overall software quality, with only 40% respectively.

@@ -2,7 +2,7 @@
 layout: post
 title: "Coding license"
 categories: article
-date: 2019-02-22 16:24:00 +0200
+date: 2019-02-22
 ---
 
 Every country I know has an obligatory driving license before you are allowed to drive a car by yourself.

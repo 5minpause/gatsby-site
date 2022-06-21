@@ -2,7 +2,7 @@
 layout: post
 title: "Refactoring without a care"
 categories: article
-date: 2019-02-28 16:24:00 +0200
+date: 2019-02-28
 ---
 
 

@@ -2,7 +2,7 @@
 layout: post
 title: "Complex conditionals"
 categories: article, code coverage, testing
-date: 2019-03-13 16:24:00 +0200
+date: 2019-03-13
 ---
 
 The other day we dealt with code coverage and gnarly conditionals. I promised to offer a way to be able to test them properly.
