@@ -9,6 +9,8 @@
   Cache-Control: public, max-age=31536000, immutable
 /a75e6e4d1b7feebda3ca1479eef2fbcc6776bb12-e7ecaf1e49debeed2f43.js
   Cache-Control: public, max-age=31536000, immutable
+/component---node-modules-lekoarts-gatsby-theme-minimal-blog-core-src-templates-homepage-query-tsx-4562885ba93e7fb0b9e2.js
+  Cache-Control: public, max-age=31536000, immutable
 /component---node-modules-lekoarts-gatsby-theme-minimal-blog-core-src-templates-blog-query-tsx-5925cc9dedfde0fb92cc.js
   Cache-Control: public, max-age=31536000, immutable
 /component---node-modules-lekoarts-gatsby-theme-minimal-blog-core-src-templates-tags-query-tsx-e7af9391b5c5be63ad28.js
@@ -17,11 +19,9 @@
   Cache-Control: public, max-age=31536000, immutable
 /component---node-modules-lekoarts-gatsby-theme-minimal-blog-core-src-templates-page-query-tsx-adfe3d00ac2868db930f.js
   Cache-Control: public, max-age=31536000, immutable
-/component---node-modules-lekoarts-gatsby-theme-minimal-blog-core-src-templates-homepage-query-tsx-8942ce2ed21abf489a88.js
-  Cache-Control: public, max-age=31536000, immutable
 /component---cache-caches-gatsby-plugin-offline-app-shell-js-5279db91ae6a867a1723.js
   Cache-Control: public, max-age=31536000, immutable
-/webpack-runtime-a432e6b722f86cd24788.js
+/webpack-runtime-1732373ca72560a05510.js
   Cache-Control: public, max-age=31536000, immutable
 /app-90387a61f4e0cdc4e86d.js
   Cache-Control: public, max-age=31536000, immutable
