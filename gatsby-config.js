@@ -21,26 +21,38 @@ module.exports = {
       options: {
         navigation: [
           {
-            title: `Blog`,
-            slug: `/blog`,
-          },
-          {
             title: `About`,
             slug: `/about`,
+          },
+          {
+            title: `Blog`,
+            slug: `/blog`,
           },
           {
             title: `Impressum`,
             slug: `/impressum`,
           },
+          {
+            title: `Training`,
+            slug: `/trainings`,
+          },
+          {
+            title: `Workshops`,
+            slug: `/workshops`,
+          },
         ],
         externalLinks: [
           {
-            name: `Twitter`,
-            url: `https://twitter.com/5minpause`,
+            name: `GitHub`,
+            url: `https://www.github.com/5minpause/`,
           },
           {
-            name: `Instagram`,
-            url: `https://www.instagram.com/5minpause/`,
+            name: `LinkedIn`,
+            url: `https://www.linkedin.com/in/holger-frohloff/`
+          },
+          {
+            name: `Twitter`,
+            url: `https://twitter.com/5minpause`,
           },
         ],
       },
