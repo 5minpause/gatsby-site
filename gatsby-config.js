@@ -14,6 +14,7 @@ module.exports = {
       "I am a freelance software engineer from Berlin occupied with family life, web development, teaching & mentoring and sports.",
     siteLanguage: "en",
     author: "Holger Frohloff",
+    siteUrl: "https://holgerfrohloff.de",
   },
   plugins: [
     {
